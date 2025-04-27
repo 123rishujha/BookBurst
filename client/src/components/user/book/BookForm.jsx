@@ -83,7 +83,8 @@ function BookForm() {
   const handleBookSelect = (book) => {
     const volumeInfo = book.volumeInfo;
     const imageLink = volumeInfo.imageLinks?.thumbnail || "";
-
+  
+    // Set form values first
     formik.setValues({
       ...formik.values,
       title: volumeInfo.title || "",
@@ -92,9 +93,12 @@ function BookForm() {
       coverImage: imageLink,
       googleBookId: book.id,
     });
-
+  
     setPreviewLink(imageLink);
     setImportMode(false);
+    
+    // Submit the form after setting values
+    formik.submitForm();
   };
 
   const handleCancel = (e) => {
