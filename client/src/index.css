@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f6ff;
+  --text-primary: #1a2b42;
+  --text-secondary: #5a6b82;
+  --primary: #4f6df5;
+  --secondary: #2c56db;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #121826;
+  --bg-secondary: #1e2a3b;
+  --text-primary: #f0f4fd;
+  --text-secondary: #c3d0e5;
+  --primary: #70adff;
+  --secondary: #4f82f7;
+}
